@@ -1,0 +1,937 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #828183;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    height: 96x;
+    padding: 0 16px; 
+    flex-wrap: wrap; 
+}
+
+.logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.nav-content > li {
+    list-style-type: none;
+    padding: 0 20px;
+    margin-top: 4%;
+}
+
+.nav-content > li > a {
+    color: #d3d3d3; 
+    text-decoration: none; 
+}
+
+.nav-content > li > a:hover {
+    color: #828183; 
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .nav-content {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-content > li {
+        padding: 0px 4;
+    }
+
+    .logo {
+        max-height: 80px; 
+    }
+}
+
+/* Container */
+.ts-container {
+    background-color: #3f3d3d;
+    height: 550px;
+}
+
+.container {
+    padding-top: 2.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+}
+
+.container > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.container > div:nth-of-type(1) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/1.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(2) {
+    background: url("../img/fearless_home.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(3) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/3.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(4) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/4.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(5) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/5.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(6) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/6.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(7) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/7.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(8) {
+    background: url("https://assets.dmi.umgapps.com/assets/taylor-swift/tour-site/landing-images/8.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(9) {
+    background: url("../img/evermore_home.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(10) {
+    background: url("../img/midnights_home.jpg") no-repeat 50% / cover;
+}
+.container > div:nth-of-type(11) {
+    background: url("../img/ttpd_home.jpg") no-repeat 50% / cover;
+}
+
+.container > div .content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 2, 46, 0.6755077030812324) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+.container > div:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #000000;
+    transform: translateY(-30px);
+}
+
+.container > div:hover .content {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+/* Container Responsivo */
+@media (max-width: 768px) {
+    .ts-container {
+        background-color: #444040;
+        height: 3580px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .container {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .container > div {
+        flex: 0 0 100%; 
+        margin-bottom: 10px; 
+        height: 300px; 
+        transition: none; 
+    }
+
+    .container > div .content {
+        font-size: 1rem; 
+        transform: none; 
+        opacity: 1; 
+        visibility: visible; 
+    }
+
+    .container > div:hover {
+        flex: 0 0 100%; 
+        box-shadow: 1px 5px 15px #000000; 
+        transform: none; 
+    }
+
+    .container > div:hover .content h2 {
+        animation: slideIn 0.5s ease-in-out; 
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Trailer Eras Tour */
+.trailer-section {
+    background-color: #c7c5c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+
+.trailer-content {
+    display: flex;
+    align-items: center;
+}
+
+.trailer-text {
+    font-family: "Playfair Display", system-ui;
+    margin-right: 100px;
+    text-align: left;
+}
+
+.trailer-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.trailer-text button {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #1e1e1f;
+    color: #c7c5c9;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px; 
+    font-family: "Poppins", system-ui;
+}
+
+.trailer-text button:hover {
+    background-color: #b17cb4;
+    color: #fff;
+}
+
+.trailer-video iframe {
+    width: 560px;
+    height: 315px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .trailer-section {
+        padding: 40px; 
+    }
+
+    .trailer-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .trailer-text {
+        margin-right: 0; 
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .trailer-video iframe {
+        width: 100%; 
+        max-width: 560px;
+        height: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .trailer-text h2 {
+        font-size: 20px; 
+    }
+
+    .trailer-text button {
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+}
+
+/* Último Álbum */
+.ultimo-album-section {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.ultimo-album-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    width: 100%; 
+    max-width: 1200px;
+}
+
+.album-info {
+    font-family: "Playfair Display", system-ui;
+    margin-right: 50px;
+    flex: 1 1 300px; 
+    text-align: center; 
+}
+
+.album-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.album-info button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1e1e1f;
+    color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px; 
+    font-family: "Poppins", system-ui;
+}
+
+.album-info button:hover {
+    background-color: #86c2db;
+    color: #fff;
+}
+
+.album-cover {
+    flex: 1 1 300px; 
+    text-align: center; 
+}
+
+.album-cover img {
+    width: 60%; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-cover img:hover {
+    transform: scale(1.05); 
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .ultimo-album-content {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .album-info {
+        margin-right: 0;
+        margin-top: 50px; 
+        text-align: center; 
+    }
+
+    .album-info button {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .album-cover img {
+        margin-top: 1px;
+        margin-bottom: 10px; 
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*TRAYECTORIA*/
+
+/* Taylor Resumen */
+.taylor-resumen {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.resumen-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.resumen-text {
+    font-family: "Poppins", sans-serif;
+    margin-right: 50px;
+    flex: 1 1 300px;
+    text-align: justify;
+}
+
+.resumen-text h2 {
+    font-family: "Playfair Display", system-ui;
+    margin: 0;
+    padding-bottom: 14px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.resumen-text p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.resumen-text p strong {
+    font-weight: bold;
+}
+
+.resumen-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.resumen-image img {
+    width: 60%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resumen-image img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .resumen-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resumen-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .resumen-text h2 {
+        text-align: center;
+    }
+
+    .resumen-image img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/*Frase */
+.taylor-frase {
+    background-color: #000000;
+    padding: 60px;
+    font-family: 'Playfair Display', serif;
+    color: #afabab;
+}
+
+.taylor-frase p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.taylor-frase p:first-child {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.taylor-frase p:last-child {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsivo  */
+@media (max-width: 600px) {
+    .taylor-frase {
+        padding: 50px;
+    }
+
+    .taylor-frase p:first-child {
+        font-size: 1em;
+    }
+}
+
+/*DISCOGRAFIA*/
+
+/* Banner Discografia */
+.banner-discografia {
+    background-color: #1b1b1b;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+}
+
+.logo-container {
+    position: absolute;
+    z-index: 2;
+}
+
+.logo-discografia {
+    width: 400px; 
+    height: auto;
+}
+
+.imagenes-alrededor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.imagen {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.imagen:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation: aparecerDesaparecer 6s infinite;
+}
+
+.imagen:nth-child(2) {
+    bottom: 10%;
+    right: 10%;
+    animation: aparecerDesaparecer 6s infinite 3s;
+}
+
+@keyframes aparecerDesaparecer {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Albums */
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #eceaea; 
+    font-family: "Poppins", sans-serif;
+}
+
+.album {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+}
+
+.album-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.album:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spotify-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #58709b;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; 
+    font-size: 16px;
+}
+
+.spotify-button:hover {
+    background-color: #2a3549;
+}
+
+/* Responsivo  */
+@media (max-width: 1200px) {
+    .album {
+        width: 45%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .album {
+        width: 45%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    .album {
+        width: 90%; 
+        height: auto;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+
+    .spotify-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* TOUR */
+
+/* Fechas Tour */
+.fechas-tour {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 90px;
+    background-color: #c4c4c4; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.fechas-tour h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #344563; 
+}
+
+.fecha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9; 
+    transition: transform 0.2s; 
+}
+
+.fecha:nth-child(even) {
+    background-color: #e9e9e9; 
+}
+
+.fecha:hover {
+    transform: scale(1.02); 
+}
+
+.fecha-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    font-family: "Poppins", sans-serif;
+}
+
+.dia {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #58709b; 
+}
+
+.lugar {
+    margin: 0;
+    font-size: 16px;
+    color: #555; 
+}
+
+.ciudad {
+    margin: 0;
+    font-size: 14px;
+    color: #777; 
+}
+
+.info-button {
+    padding: 10px 20px;
+    background-color: #58709b;
+    color: white;
+    text-decoration: none;
+    border-radius: 60px; 
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.info-button:hover {
+    background-color: #202838;
+    transform: scale(1.05); 
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .fecha {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-button {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Compartir Fotos*/
+.forms-updates {
+    background-color: #f4e4fa;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forms-updates h2 {
+    font-size: 30px;
+    color: #9c68b1;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.forms-updates p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.forms-updates button {
+    background-color: #9c68b1;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.forms-updates button:hover {
+    background-color: #cb97da;
+}
+
+/* Responsivo  */
+@media (max-width: 600px) {
+    .forms-updates {
+        padding: 15px;
+    }
+
+    .forms-updates h2 {
+        font-size: 30px;
+    }
+
+    .forms-updates p {
+        font-size: 14px;
+    }
+
+    .forms-updates button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/*STORE*/
+
+/*Playeras*/
+.playeras {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #1f1d1d;
+}
+
+.product-card {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+    width: 22%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.product-card button {
+    font-family: "Poppins", sans-serif;
+    background-color: #000000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #cb97da;
+    color: #ffffff;
+}
+
+.product-card img:hover {
+    opacity: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .product-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1f;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 60px;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-text p {
+    margin: 5px 0;
+}
+
+.footer-text a {
+    color: #7a7e80;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-text p {
+        font-size: 14px;
+    }
+
+    .footer-text a {
+        margin: 0 3px;
+    }
+}
